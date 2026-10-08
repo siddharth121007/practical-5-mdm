@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <title>Student Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth Chaudhari | CS25239</title>
+
+    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-cover bg-center bg-fixed"
+      style="background-image: url('https://www.sbjit.edu.in/wp-content/uploads/2021/06/About-1.jpg');">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Background Overlay -->
+    <div class="min-h-screen bg-black/50 flex items-center justify-center px-3 py-5 sm:px-5 sm:py-8 md:px-8 md:py-10">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Registration Card -->
+        <div class="w-full max-w-[94%] sm:max-w-[600px] md:max-w-[620px] lg:max-w-[650px] bg-white p-5 sm:p-7 md:p-8 lg:p-9 rounded-2xl shadow-2xl">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-fuchsia-200 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-rose-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-30 border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo with Gradient Icon -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 via-pink-500 to-fuchsia-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-2xl tracking-tight bg-gradient-to-r from-rose-600 via-pink-600 to-fuchsia-600 bg-clip-text text-transparent">
+                        Siddharth Chaudhari
+                    </span>
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-slate-600">CS25239</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#hero" class="hover:text-rose-600 transition-colors">Home</a>
+                <a href="#menu" class="text-rose-600 font-bold">Today's Special</a>
+                <a href="#features" class="hover:text-rose-600 transition-colors">About Us</a>
+                <a href="#contact" class="hover:text-rose-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action Button with Gradient -->
+            <a href="#menu" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-lg shadow-rose-500/25 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                Order Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-16 lg:py-24 bg-gradient-to-br from-rose-200 via-pink-300 to-fuchsia -200 overflow-hidden">
+        <!-- Background Gradient Orbs -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gradient-to-br from-rose-500/30 to-pink-400/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-gradient-to-tr from-rose-300/30 to-fuchsia-300/20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-500/10 via-pink-500/10 to-fuchsia-500/10 border border-rose-200 text-rose-700 text-xs font-bold uppercase tracking-wider mb-4">
+                🌱 100% Plant-Based & Cruelty-Free
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+                Good Food, Everyday! <br><span class="bg-gradient-to-r from-rose-600 via-pink-600 to-fuchsia-600 bg-clip-text text-transparent"> Popular Indian Dishes</span>
+            </h1>
+            <p class="mt-4 text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Healthy, delicious, and guilt-free meals that are perfect for anyone looking to eat well without compromising on taste.
+            </p>
+
+            <!-- Quick Filter Pill Highlights -->
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span> 100% veg-Pure plant-based
+                </span>
+                <span class="px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-pink-500"></span> Organic foods
+                </span>
+                <span class="px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-fuchsia-500"></span> Eco-Friendly Packaging
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN FOOD MENU SECTION (TAILWIND CSS GRID) -->
+    <section id="menu" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title with Gradient Accent -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Today's Special
+            </h2>
+            <div class="mt-3 w-24 h-1.5 bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-500 text-sm max-w-lg mx-auto">
+                Discover our signature plant-based dishes neatly arranged using responsive Tailwind CSS Grid.
+            </p>
+        </div>
+
+            <!-- Heading -->
+            <div class="text-center mb-6 sm:mb-7">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+                    Student Registration
+                </h1>
+        <!-- TAILWIND CSS GRID CONTAINER -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- VEG THALI FOOD CARD 1 -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container with Hover Zoom & Gradient Badge Overlay -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1742281257687-092746ad6021?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Veg Thali" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-rose-500 to-pink-500 shadow-md">
+                            Homestyle Indian Thali
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹299
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.9 (150+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                            Veg Thali 
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            A delicious and nutritious thali with a variety of vegetarian dishes.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-500 text-sm sm:text-base mt-2">
+                    Enter your details to register
+                </p>
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <form id="registrationForm">
+            <!--  FOOD CARD 2 -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://media.istockphoto.com/id/669635320/photo/kidney-bean-curry-or-rajma-or-rajmah-chawal-and-roti-typical-north-indian-main-course.jpg?s=2048x2048&w=is&k=20&c=Ni3u_xVMe_9QoG0DK6OldWdM_P6M6P5Cyc7UltWxgJg=" 
+                             alt="Rajma Chawal" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-fuchsia-500 to-pink-500 shadow-md">
+                            Customer Favorite
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹149
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.8 (110+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                            Rajma Chawal
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            A delicious and nutritious Rajma Chawal with a variety of spices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Student Name -->
+                <div class="mb-4 sm:mb-5">
+                    <label class="block text-sm sm:text-base font-medium text-gray-700 mb-2">
+                        Student Name
+                    </label>
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+                    <input type="text"
+                           id="name"
+                           placeholder="Enter your name"
+                           class="w-full border border-gray-300 p-3 sm:p-3.5 md:p-4 rounded-xl text-sm sm:text-base outline-none focus:border-blue-500">
+            <!--  FOOD CARD 3 -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://media.istockphoto.com/id/979914742/photo/chole-bhature-or-chick-pea-curry-and-fried-puri-served-in-terracotta-crockery-over-white.jpg?s=2048x2048&w=is&k=20&c=zhmGombUCMWWkdI2COP1vh1bDma-3wS_FOv4GmHE41s=" 
+                             alt="chole Bhature" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-fuchsia-500 to-pink-500 shadow-md">
+                            Best Seller
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹129
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">5.0 (230+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-pink-600 transition-colors">
+                         Chole Bhature                         
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Oraganic plant-based chole curry served with fluffy filled bhature, garnished with fresh coriander and Lemon wedges.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- USN Number -->
+                <div class="mb-4 sm:mb-5">
+                    <label class="block text-sm sm:text-base font-medium text-gray-700 mb-2">
+                        USN Number
+                    </label>
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+                    <input type="text"
+                           id="usn"
+                           placeholder="Enter your USN number"
+                           class="w-full border border-gray-300 p-3 sm:p-3.5 md:p-4 rounded-xl text-sm sm:text-base outline-none focus:border-blue-500">
+            <!--  FOOD CARD 4 -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Masala Dosa" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-rose-500 to-pink-500 shadow-md">
+                            South Indian Special
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹120
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-fuchsia-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.7 (160+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-pink-600 transition-colors">
+                            Masala Dosa
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Crispy rice and lentil crepe filled with spiced potato masala and served with coconut chutney and sambar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4 sm:mb-5">
+                    <label class="block text-sm sm:text-base font-medium text-gray-700 mb-2">
+                        Email
+                    </label>
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+                    <input type="text"
+                           id="email"
+                           placeholder="Enter your email"
+                           class="w-full border border-gray-300 p-3 sm:p-3.5 md:p-4 rounded-xl text-sm sm:text-base outline-none focus:border-blue-500">
+            <!--  FOOD CARD 5 -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://media.istockphoto.com/id/2269174395/photo/samosa-chaat-topped-yogurt-chutney-sev-chickpeas-onion-indian-street-food-spicy-tangy-snack.jpg?s=2048x2048&w=is&k=20&c=F3s8L5DdD7TFlpLmKF1jpFvl7jg9G6NCVrC6XFLjemI=" 
+                             alt="Samosa Chaat" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-rose-500 to-fuchsia-500 shadow-md">
+                            Street Food Delight
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹49
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.8 (125+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-pink-600 transition-colors">
+                            Samosa Chaat
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Crispy samosa topped with tangy tamarind chutney and fresh yogurt, garnished with sev and coriander
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label class="block text-sm sm:text-base font-medium text-gray-700 mb-2">
+                        Password
+                    </label>
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+                    <input type="password"
+                           id="password"
+                           placeholder="Enter your password"
+                           class="w-full border border-gray-300 p-3 sm:p-3.5 md:p-4 rounded-xl text-sm sm:text-base outline-none focus:border-blue-500">
+            <!--  FOOD CARD 6 -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Pulaav Rice" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-rose-500 to-fuchsia-500 shadow-md">
+                            South Indian Special
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹120
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.9 (180+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-pink-600 transition-colors">
+                            Pulaav Rice
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Fragrant basmati rice cooked in a rich, aromatic curry with tender vegetables and a hint of spices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Show Password -->
+                <button onclick="showpass()"
+                        id="togglePassword"
+                        class="bg-blue-500 text-white p-2 sm:p-2.5 rounded-lg mb-5 text-sm sm:text-base">
+                    Show Password
+                </button>
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 hover:from-rose-600 hover:to-fuchsia-600 text-white font-bold text-sm shadow-md shadow-rose-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+                <br>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Features Section -->
+    <section id="features" class="py-16 bg-gradient-to-br from-rose-500/5 via-pink-500/5 to-fuchsia-500/5 border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <div class="p-8 bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 flex items-center justify-center text-white text-2xl shadow-md mb-4">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">100% Veg and Pure</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Made with 100% plant-based.</p>
+                </div>
+
+                <!-- Mobile Number -->
+                <div class="mb-5 sm:mb-6">
+                    <label class="block text-sm sm:text-base font-medium text-gray-700 mb-2">
+                        Mobile Number
+                    </label>
+                <div class="p-8 bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 flex items-center justify-center text-white text-2xl shadow-md mb-4">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Nutrient Rich</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Rich in natural antioxidants,protein, healthy fats, and essential minerals.</p>
+                </div>
+
+                    <input type="text"
+                           id="mobile"
+                           placeholder="Enter 10-digit mobile number"
+                           class="w-full border border-gray-300 p-3 sm:p-3.5 md:p-4 rounded-xl text-sm sm:text-base outline-none focus:border-blue-500">
+                <div class="p-8 bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-rose-500 to-fuchsia-500 flex items-center justify-center text-white text-2xl shadow-md mb-4">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Eco Friendly</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Packaged in 100% biodegradable, plastic-free compostable containers.</p>
+                </div>
+
+                <!-- Register Button -->
+                <button type="submit"
+                        class="w-full bg-blue-500 text-white p-3 sm:p-3.5 md:p-4 rounded-xl text-sm sm:text-base md:text-lg font-medium">
+                    Register
+                </button>
+            </div>
+        </div>
+    </section>
+
+                <!-- Message -->
+                <p id="message" class="mt-4 sm:mt-5 text-center text-sm sm:text-base"></p>
+    <!-- Footer -->
+    <footer id="contact" class="bg-white text-slate-600 py-10 mt-auto border-t border-slate-200">
+        <!-- Top Gradient Accent Line -->
+        <div class="h-1 w-full bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 -mt-10 mb-10"></div>
+        <section id="footer" class="relative py-16 lg:py-24 bg-gradient-to-br from-rose-200 via-pink-300 to-fuchsia-200 overflow-hidden">
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showpass() {
+            if (document.getElementById("password").type === "password") {
+                document.getElementById("password").type = "text";
+                document.getElementById("togglePassword").innerHTML = "Hide Password";
+            } else {
+                document.getElementById("password").type = "password";
+                document.getElementById("togglePassword").innerHTML = "Show Password";
+            }
+        }
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-col items-center justify-between gap-4 text-xs font-medium">
+
+        document.getElementById("registrationForm").onsubmit = function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let usn = document.getElementById("usn").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let mobile = document.getElementById("mobile").value;
+
+            let message = document.getElementById("message");
+
+            // Mandatory fields
+            if (name == "" || usn == "" || email == "" || password == "" || mobile == "") {
+                message.innerHTML = "Please fill all fields.";
+                message.className = "mt-4 text-center text-red-500";
+                return;
+            }
+
+            // USN validation
+            if (usn == "") {
+                message.innerHTML = "Please enter your USN number.";
+                message.className = "mt-4 text-center text-red-500";
+                return;
+            }
+
+            // Email validation
+            if (!email.includes("@") || !email.includes(".")) {
+                message.innerHTML = "Enter a valid email.";
+                message.className = "mt-4 text-center text-red-500";
+                return;
+            }
+
+            // Password validation
+            if (
+                password.length < 6 ||
+                !/[A-Z]/.test(password) ||
+                !/[a-z]/.test(password) ||
+                !/[0-9]/.test(password) ||
+                !/[!@#$%^&*]/.test(password)
+            ) {
+                message.innerHTML = "Password must be at least 6 characters and include an uppercase letter, a lowercase letter, a number, and a special character.";
+                message.className = "mt-4 text-center text-red-500";
+                return;
+            }
+
+            // Mobile validation
+            if (mobile.length != 10 || isNaN(mobile)) {
+                message.innerHTML = "Enter a valid 10-digit mobile number.";
+                message.className = "mt-4 text-center text-red-500";
+                return;
+            }
+
+            // Success
+            message.innerHTML = "Registration Successful!";
+            message.className = "mt-4 text-center text-green-500";
+        };
+    </script>
+            <!--Restaurant Information-->
+            <div class="flex flex-col sm:flex-col item-center text-black text-center font-medium gap-2">
+                <span>Time: 11:00 AM - 10:00 PM</span>
+            </div>
+            <div class="flex flex-col sm:flex-col items-center text-black text-center font-medium gap-2">
+                <span>Address: street no.3, IT park, Nagpur, Maharashtra, India</span>
+                <span>GSTIN: 27ABCDE1234F1Z5</span>
+            </div>
+            <!--Contact Information-->
+            <div class="flex flex-col sm:flex-col items-center text-black text-center font-medium gap-2">
+                <span>Contact: +91 12345 67890</span>
+                <span>Email: <a href="mailto:info@pranavthawarekitchen.com" class="hover:text-rose-500">info@pranavthawarekitchen.com</a></span>
+            </div>
+            <!-- Brand copyright -->
+            <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-rose-500 to-fuchsia-500 flex items-center justify-center text-white text-xs font-bold">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <span class="font-bold text-slate-800">Pranav Thaware Kitchen</span> &copy; CS25223 2026. All rights reserved.
+            </div>
+
+            <!-- Social Media Anchor Links -->
+            <div class="flex items-center gap-3">
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-pink-500 hover:to-rose-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-rose-500 hover:to-pink-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter / X" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-pink-500 hover:to-fuchsia-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-twitter text-sm"></i>
+                </a>
+                <a href="https://wa.me/" target="_blank" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-rose-500 hover:to-pink-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a>
+            </div>
+        </div>
+        </section>
+    </footer>
+
+</body>
+</html>
